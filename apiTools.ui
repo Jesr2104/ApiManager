@@ -22,6 +22,10 @@
 	padding: 5px;
 	background-color: #FFF;
 	border-radius: 5px;
+}
+
+#centralwidget{
+	background-color: #26333f
 }</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -320,7 +324,7 @@
          <number>0</number>
         </property>
         <item>
-         <widget class="QFrame" name="frame">
+         <widget class="QFrame" name="frame1">
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
           </property>
@@ -344,7 +348,7 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QLabel" name="label">
+            <widget class="QLabel" name="title_insert">
              <property name="maximumSize">
               <size>
                <width>16777215</width>
@@ -353,7 +357,10 @@
              </property>
              <property name="font">
               <font>
-               <pointsize>30</pointsize>
+               <pointsize>25</pointsize>
+               <weight>75</weight>
+               <italic>true</italic>
+               <bold>true</bold>
               </font>
              </property>
              <property name="text">
@@ -365,14 +372,17 @@
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="frame_2">
+            <widget class="QFrame" name="frame_insert_form">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="label_product_name">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -395,7 +405,7 @@
                <string>Product Name:</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="editText_product_name">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -410,7 +420,7 @@
                </font>
               </property>
              </widget>
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="label_product_origen">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -433,7 +443,7 @@
                <string>Product Origen:</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="editText_product_origen">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -448,7 +458,7 @@
                </font>
               </property>
              </widget>
-             <widget class="QLabel" name="label_4">
+             <widget class="QLabel" name="label_price">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -471,7 +481,7 @@
                <string>Price:</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit_3">
+             <widget class="QLineEdit" name="editText_price">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -486,7 +496,7 @@
                </font>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit_4">
+             <widget class="QLineEdit" name="editText_discount">
               <property name="geometry">
                <rect>
                 <x>220</x>
@@ -501,7 +511,7 @@
                </font>
               </property>
              </widget>
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="label_discount">
               <property name="geometry">
                <rect>
                 <x>220</x>
@@ -524,7 +534,7 @@
                <string>Discount:</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit_5">
+             <widget class="QLineEdit" name="editText_moq">
               <property name="geometry">
                <rect>
                 <x>390</x>
@@ -539,7 +549,7 @@
                </font>
               </property>
              </widget>
-             <widget class="QLabel" name="label_6">
+             <widget class="QLabel" name="label_moq">
               <property name="geometry">
                <rect>
                 <x>390</x>
@@ -562,7 +572,7 @@
                <string>MOQ:</string>
               </property>
              </widget>
-             <widget class="QComboBox" name="comboBox">
+             <widget class="QComboBox" name="comboBox_category">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -607,7 +617,7 @@
                </property>
               </item>
              </widget>
-             <widget class="QLabel" name="label_7">
+             <widget class="QLabel" name="label_category">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -630,7 +640,7 @@
                <string>Category:</string>
               </property>
              </widget>
-             <widget class="QComboBox" name="comboBox_2">
+             <widget class="QComboBox" name="comboBox_sales_unit">
               <property name="geometry">
                <rect>
                 <x>310</x>
@@ -670,7 +680,7 @@
                </property>
               </item>
              </widget>
-             <widget class="QLabel" name="label_8">
+             <widget class="QLabel" name="label_sales_unit">
               <property name="geometry">
                <rect>
                 <x>310</x>
@@ -690,10 +700,10 @@
 }</string>
               </property>
               <property name="text">
-               <string>Salect option:</string>
+               <string>Sales Unit:</string>
               </property>
              </widget>
-             <widget class="QLabel" name="label_9">
+             <widget class="QLabel" name="label_description">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -716,7 +726,7 @@
                <string>Description:</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit_6">
+             <widget class="QLineEdit" name="editText_description">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -731,7 +741,7 @@
                </font>
               </property>
              </widget>
-             <widget class="QGroupBox" name="groupBox_4">
+             <widget class="QGroupBox" name="groupBox_available">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -748,7 +758,7 @@
               <property name="title">
                <string>Available</string>
               </property>
-              <widget class="QRadioButton" name="radioButton_7">
+              <widget class="QRadioButton" name="available_option_true">
                <property name="geometry">
                 <rect>
                  <x>20</x>
@@ -766,7 +776,7 @@
                 <string>True</string>
                </property>
               </widget>
-              <widget class="QRadioButton" name="radioButton_8">
+              <widget class="QRadioButton" name="available_option_false">
                <property name="geometry">
                 <rect>
                  <x>20</x>
@@ -785,7 +795,7 @@
                </property>
               </widget>
              </widget>
-             <widget class="QGroupBox" name="groupBox_5">
+             <widget class="QGroupBox" name="groupBox_disable">
               <property name="geometry">
                <rect>
                 <x>210</x>
@@ -802,7 +812,7 @@
               <property name="title">
                <string>Disable</string>
               </property>
-              <widget class="QRadioButton" name="radioButton_9">
+              <widget class="QRadioButton" name="disable_option_true">
                <property name="geometry">
                 <rect>
                  <x>20</x>
@@ -820,7 +830,7 @@
                 <string>True</string>
                </property>
               </widget>
-              <widget class="QRadioButton" name="radioButton_10">
+              <widget class="QRadioButton" name="disable_option_false">
                <property name="geometry">
                 <rect>
                  <x>20</x>
@@ -839,7 +849,7 @@
                </property>
               </widget>
              </widget>
-             <widget class="QGroupBox" name="groupBox_6">
+             <widget class="QGroupBox" name="groupBox_season_product">
               <property name="geometry">
                <rect>
                 <x>370</x>
@@ -856,7 +866,7 @@
               <property name="title">
                <string>Season product</string>
               </property>
-              <widget class="QRadioButton" name="radioButton_11">
+              <widget class="QRadioButton" name="season_option_true">
                <property name="geometry">
                 <rect>
                  <x>20</x>
@@ -874,7 +884,7 @@
                 <string>True</string>
                </property>
               </widget>
-              <widget class="QRadioButton" name="radioButton_12">
+              <widget class="QRadioButton" name="season_option_false">
                <property name="geometry">
                 <rect>
                  <x>20</x>
@@ -893,7 +903,7 @@
                </property>
               </widget>
              </widget>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="button_load_image">
               <property name="geometry">
                <rect>
                 <x>50</x>
@@ -916,7 +926,7 @@
                <string>Select Image:</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit_7">
+             <widget class="QLineEdit" name="editText_image_location">
               <property name="geometry">
                <rect>
                 <x>250</x>
@@ -931,7 +941,7 @@
                </font>
               </property>
              </widget>
-             <widget class="QPushButton" name="pushButton_2">
+             <widget class="QPushButton" name="button_create_product">
               <property name="geometry">
                <rect>
                 <x>170</x>
@@ -942,7 +952,6 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>20</pointsize>
                 <weight>62</weight>
                 <bold>true</bold>
                </font>
@@ -966,8 +975,181 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="edit_product"/>
-      <widget class="QWidget" name="delete_product"/>
+      <widget class="QWidget" name="edit_product">
+       <property name="styleSheet">
+        <string notr="true">QFrame{
+	background-color: #FFF;
+	border-radius: 25px;
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="frame2">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="title_edit">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>130</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>25</pointsize>
+               <weight>75</weight>
+               <italic>true</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Edit product</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_edit_form">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="delete_product">
+       <property name="styleSheet">
+        <string notr="true">QFrame{
+	background-color: #FFF;
+	border-radius: 25px;
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="title_delete">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>130</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>25</pointsize>
+               <weight>75</weight>
+               <italic>true</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Delete product</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_delete_form">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
