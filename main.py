@@ -76,6 +76,22 @@ def get_file_image():
     return QFileDialog.getOpenFileName()[0]
 
 
+# function to get the file of the product
+# ============================================================================
+def get_code_category(category):
+    match category:
+        case "Fruit":
+            return 1
+        case "Vegetables":
+            return 2
+        case "Fresh Herbs":
+            return 3
+        case "Dried Fruit & Nuts":
+            return 4
+        case "Others":
+            return 5
+
+
 # class to show the graphic windows and interface
 # ============================================================================
 class InterfaceGui(QMainWindow):
@@ -145,7 +161,7 @@ class InterfaceGui(QMainWindow):
                         discount=discount,
                         moq=moq,
                         productDetails=description,
-                        categoryProduct=category,
+                        categoryProduct=get_code_category(category),
                         salesUnit=sales_unit,
                         isAvailable=available,
                         isDisable=disable,
