@@ -88,8 +88,10 @@ def get_code_category(category):
             return 3
         case "Dried Fruit & Nuts":
             return 4
-        case "Others":
+        case "Mushrooms":
             return 5
+        case "Others":
+            return 0
 
 
 # class to show the graphic windows and interface

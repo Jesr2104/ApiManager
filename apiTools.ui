@@ -613,6 +613,11 @@
               </item>
               <item>
                <property name="text">
+                <string>Mushrooms</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
                 <string>Others</string>
                </property>
               </item>
