@@ -1,6 +1,7 @@
 # Import of the app
 import sys
 import pyrebase
+import uuid
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 
@@ -23,10 +24,11 @@ def config_firebase():
 
 # function to configurate our service of database
 # ============================================================================
-def create_new_product(moq, categoryProduct, discount, imageProduct,
+def create_new_product(idProduct, moq, categoryProduct, discount, imageProduct,
                        inSeason, isAvailable, isDisable, nameProduct,
                        price, productDetails, productOrigin, salesUnit):
     database = {
+        "idProduct": idProduct,
         "MOQ": moq,
         "categoryProduct": categoryProduct,
         "discount": discount,
@@ -157,6 +159,7 @@ class InterfaceGui(QMainWindow):
 
                     # if all fields are full we insert the new product
                     new_product = create_new_product(
+                        idProduct=str(uuid.uuid4().hex),
                         nameProduct=product_name,
                         productOrigin=product_origen,
                         price=price,
